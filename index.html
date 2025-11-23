@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Studio Dashboard</title>
+
+  <style>
+    /* ให้ iframe กินเต็มหน้าจอ และ responsive สำหรับมือถือ */
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+    }
+    iframe {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      border: none;
+    }
+  </style>
+</head>
+
+<body>
+  <iframe 
+    src="https://script.google.com/macros/s/AKfycbwZvicJpz6fFA44UVMX7VKiq6pFAjlRaA_IAXwl3HXBe8lbR9ta6Qznfd1LqLh6Y2lP/exec"
+    allowfullscreen>
+  </iframe>
+
+  <script>
+    // เปิด full screen อัตโนมัติ (บาง browser อาจบล็อกเพื่อความปลอดภัย)
+    window.onload = function() {
+      const iframe = document.querySelector("iframe");
+      if (iframe.requestFullscreen) {
+        iframe.requestFullscreen().catch(() => {});
+      }
+    };
+  </script>
+</body>
+</html>
